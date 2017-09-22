@@ -14,10 +14,11 @@ remote_file local_targz_path do
   checksum ns['targz_checksum_sha256']
 end
 
+install_d_base = ns['install_d_base']
 install_d = ns['install_d']
 
 execute 'extract_golang' do
-  command "tar -C #{install_d} -xzf #{local_targz_path}"
+  command "tar -C #{install_d_base} -xzf #{local_targz_path}"
   creates install_d
 end
 

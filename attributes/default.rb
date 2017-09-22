@@ -3,7 +3,8 @@ default['golang']['targz_checksum_sha256'] = 'd70eadefce8e160638a9a6db97f7192d84
 default['golang']['dl_url'] = "https://storage.googleapis.com/golang/#{node['golang']['targz']}"
 default['golang']['staging_d'] = '/var/tmp'
 
-default['golang']['install_d'] = '/usr/local/go'
+default['golang']['install_d_base'] = '/usr/local'
+default['golang']['install_d'] = "#{node['golang']['install_d_base']}/go"
 
 # sample workspace
 default['golang']['install_workspace'] = true
