@@ -6,6 +6,8 @@ default['golang']['staging_d'] = '/var/tmp'
 default['golang']['install_d_base'] = '/usr/local'
 default['golang']['install_d'] = "#{node['golang']['install_d_base']}/go"
 
+default['golang']['var_sh'] = '/etc/profile.d/golang.sh'
+
 # sample workspace
 default['golang']['install_workspace'] = true
 

@@ -22,7 +22,7 @@ execute 'extract_golang' do
   creates install_d
 end
 
-template '/etc/profile.d/golang.sh' do
+template ns['var_sh'] do
   source 'golang.sh.erb'
 end
 
