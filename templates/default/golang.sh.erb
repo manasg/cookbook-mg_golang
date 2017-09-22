@@ -1,0 +1,5 @@
+export GOROOT=<%= node['golang']['install_d'] %>
+export PATH=$PATH:$GOROOT/bin
+<% if node['golang']['install_workspace'] %>
+export GOPATH=<%= node['golang']['ws_d'] %>
+<% end %>
