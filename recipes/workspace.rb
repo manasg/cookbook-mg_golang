@@ -6,6 +6,8 @@ directory d do
   recursive true
 end
 
+package 'git'
+
 sample_proj_d = "#{d}/src/hello"
 
 directory sample_proj_d do
